@@ -50,12 +50,13 @@ const ConferenceEvent = () => {
             dispatch(toggleMealSelection(index));
         }
     };
+        
 
     const getItemsFromTotalCost = () => {
         const items = [];
         venueItems.forEach((item) => {
-            if (item.quantity > 0) {
-            items.push({ ...item, type: "venue" });
+            if (item.quantity > 0){
+                items.push({...item, type: 'venue'});
             }
         });
         avItems.forEach((item) => {
@@ -77,9 +78,8 @@ const ConferenceEvent = () => {
         });
         return items;
         };
-        
 
-    const items = getItemsFromTotalCost();
+        const items = getItemsFromTotalCost();        
 
     const ItemsDisplay = ({ items }) => {
         console.log(items);
